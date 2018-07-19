@@ -7,7 +7,7 @@ public type GoogleDriveConnector object {
 };
 
 
-public function GoogleDriveConnector::fileList() {
+function GoogleDriveConnector::fileList() {
     endpoint http:Client httpClient = self.client;
     string requestPath = "/files" ;
     var response = httpClient->get(requestPath);
